@@ -1,0 +1,36 @@
+Identifier: com.github.zach.botterman.jamf.Brightday
+ParentRecipe: com.github.zach.botterman.pkg.Brightday
+MinimumVersion: 1.0.0
+
+Input:
+  NAME: Brightday
+  CATEGORY: Productivity
+  GROUP_NAME: '%NAME%-update-smart'
+  GROUP_TEMPLATE: SmartGroupTemplate.xml
+  POLICY_CATEGORY: Utility
+  POLICY_TEMPLATE: PolicyTemplate_ScopeToAll.xml
+  SELF_SERVICE_DESCRIPTION: Brightday is an Ai augmented reality solution to help you improve and keep the right posture, avoid pain and increase productivity via your desktop's camera.
+  SELF_SERVICE_ICON: '%NAME%.png'
+
+Process:
+- Processor: com.github.grahampugh.jamf-upload.processors/JamfPackageUploader
+  Arguments:
+    pkg_category: '%CATEGORY%'
+
+- Processor: com.github.grahampugh.jamf-upload.processors/JamfPolicyUploader
+  Arguments:
+    policy_name: 'Install Latest %NAME%'
+    icon: '%SELF_SERVICE_ICON%'
+    category: '%CATEGORY%'
+    policy_category: '%POLICY_CATEGORY%'
+    policy_template: '%POLICY_TEMPLATE%'
+    policy_name: 'Install Latest %NAME%'
+    self_service_description: '%SELF_SERVICE_DESCRIPTION%'
+    VERSION: '%version%'
+    replace_policy: true
+
+- Processor: com.github.grahampugh.jamf-upload.processors/JamfComputerGroupUploader
+  Arguments:
+    computergroup_name: '%GROUP_NAME%'
+    replace_group: true
+    computergroup_template: '%GROUP_TEMPLATE%'
