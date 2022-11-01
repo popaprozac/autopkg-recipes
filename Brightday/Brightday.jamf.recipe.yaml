@@ -1,5 +1,5 @@
-Identifier: com.github.zach.botterman.jamf.Brightday
-ParentRecipe: com.github.zach.botterman.pkg.Brightday
+Identifier: com.github.popaprozac.jamf.Brightday
+ParentRecipe: com.github.popaprozac.pkg.Brightday
 MinimumVersion: 1.0.0
 
 Input:

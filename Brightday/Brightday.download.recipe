@@ -5,7 +5,7 @@
 	<key>Description</key>
 	<string>Downloads the latest version of Brightday.</string>
 	<key>Identifier</key>
-	<string>com.github.zach.botterman.download.Brightday</string>
+	<string>com.github.popaprozac.download.Brightday</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>

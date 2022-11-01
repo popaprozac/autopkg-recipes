@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Identifier</key>
-	<string>com.github.zach.botterman.jamf.Brightday</string>
+	<string>com.github.popaprozac.jamf.Brightday</string>
 	<key>Input</key>
 	<dict>
 		<key>CATEGORY</key>
